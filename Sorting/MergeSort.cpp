@@ -29,7 +29,7 @@ void merge(vector<int>& arr, int low, int mid, int high){
     }
     // transfering all elements from temporary to arr
     for (int i = low; i <= high; i++){
-        arr[i] = temp[i - low];
+        arr[i] = temp[i - low];//(i-mid) for temp(dry run) so it works fine when merging small halfs of array which are sorted
     }    
 }
 
