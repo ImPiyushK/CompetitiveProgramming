@@ -1,6 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+//Striver Method
 int partition(vector<int>& arr, int low, int high){
     int pivot = arr[low];
     int i = low;
@@ -21,9 +22,25 @@ int partition(vector<int>& arr, int low, int high){
     return j;
 }
 
+//Method used in CLRS
+int partition2(vector<int>& arr, int low, int high){
+    int pivot = arr[low];
+    int k = low;
+    for(int i = low + 1 ; i <= high ; ++i){
+        if(arr[i] <= pivot){
+            k++;
+            swap(arr[k], arr[i]);
+        }
+    }
+    swap(arr[low], arr[k]);
+    return k;
+}
+
 void qs(vector<int>& arr, int low, int high){
     if(low < high){ //more than 1 element in array
-        int pi = partition(arr, low, high); //find pivot, place it at its correct position and return which pos it's placed at
+        //find pivot, place it at its correct position and return which pos it's placed at
+        int pi = partition(arr, low, high); 
+        // int pi = partition2(arr, low, high); //CLRS Method
         qs(arr, low, pi - 1);
         qs(arr, pi + 1, high);
     }
