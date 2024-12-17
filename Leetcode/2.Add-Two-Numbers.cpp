@@ -29,8 +29,10 @@ public:
     }
 };
 
-public int missingNumber(int[] nums) { //binary search
-    Arrays.sort(nums);
+class Solution {
+public:
+int missingNumber(vector<int>& nums) {
+    sort(nums.begin(), nums.end());
     int left = 0, right = nums.size(), mid= (left + right)/2;
     while(left<right){
         mid = (left + right)/2;
@@ -39,3 +41,4 @@ public int missingNumber(int[] nums) { //binary search
     }
     return left;
 }
+};
