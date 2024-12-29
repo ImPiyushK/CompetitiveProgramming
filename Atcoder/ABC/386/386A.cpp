@@ -27,3 +27,17 @@ int main() {
   }
   cout << "No";
 }
+
+//OR use MAP or SET
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int a;
+    set<int> t;
+    for(int i=0; i<4; i++) {
+        cin >> a;
+        t.insert(a);
+    }
+    cout << (t.size() == 2 ? "Yes\n" : "No\n");
+}
