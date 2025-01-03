@@ -19,6 +19,7 @@ int main() {
     }
 
     if (n == m) {
+        // Check for one replacement
         int diffCount = 0;
         for (int i = 0; i < n; i++) {
             if (s[i] != t[i]) {
@@ -31,6 +32,7 @@ int main() {
         }
         cout << (diffCount == 1 ? "Yes" : "No") << endl;
     } else {
+        // Check for one insertion or deletion
         string longer = (n > m) ? s : t;
         string shorter = (n > m) ? t : s;
 
@@ -43,7 +45,7 @@ int main() {
                     return 0;
                 }
                 diff= true;
-                i++;
+                i++;// Skip one character in the longer string
             } else {
                 i++;
                 j++;
