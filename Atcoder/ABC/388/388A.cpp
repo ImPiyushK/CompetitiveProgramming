@@ -12,7 +12,7 @@ int main() {
 
     cout << s[0] << "UPC";
     //OR
-    //cout << s.substr(0,1) ++ "UPC";
+    //cout << s.substr(0,1) + "UPC";
     
     return 0;
 }
