@@ -8,11 +8,11 @@ int main()
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
     int T;
-    cin>>T;
+    cin >> T;
     while(T--){
 
         string a,b; 
-        cin>>a>>b;
+        cin >> a >> b;
 
         if(b.size() > a.size()){
             cout << -1 << endl; 
@@ -40,7 +40,7 @@ int main()
                 ans += ct;
             }
             else{
-            ct++;
+                ct++;
             }
         }
         cout << ans << '\n';
