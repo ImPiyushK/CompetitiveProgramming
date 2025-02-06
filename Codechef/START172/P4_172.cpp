@@ -24,8 +24,6 @@ int main()
 {
 ios_base::sync_with_stdio(false);
 cin.tie(NULL);
-    // freopen("input06.txt","r",stdin);
-    // freopen("output06.txt","w",stdout);
 int T;
 cin>>T;
 while(T--)
