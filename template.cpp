@@ -14,7 +14,6 @@ using namespace std;
 const ll MOD = 1e9 + 7;
 const ll INF = 1e9;
 
-
 void solve() {
 	cout << "Hello WOrld" << '\n';
 }
