@@ -4,10 +4,10 @@
 
 using namespace std;
 
-vector<int> getFirstRepeatingElement(const vector<int>& arr) {
+vector<int> getFirstRepeatingElement(vector<int>& arr) {
     unordered_map<int, int> frequency;
     
-    for (size_t i = 0; i < arr.size(); ++i) {
+    for (int i = 0; i < arr.size(); ++i) {
         if (++frequency[arr[i]] > 1) {
             return {arr[i]};
         }
@@ -42,7 +42,7 @@ int main() {
     freopen("E:/Workspaces/CompetitiveProgramming/input.in", "r", stdin);
     freopen("E:/Workspaces/CompetitiveProgramming/output.in", "w", stdout);
     #endif
-    
+
     int testCases;
     cin >> testCases;
     
