@@ -22,9 +22,10 @@ int main() {
 	    }
 	    cout << c << '\n';
 	}
-
+	return 0;
 }
 
+//  OR
 //  if(og[i] < s[i]){
 // 	                c += ('Z' - s[i]) + ('A' - og[i]);
 // 	            }
