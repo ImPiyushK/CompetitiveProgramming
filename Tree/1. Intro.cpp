@@ -1,6 +1,11 @@
 #include<iostream>
 using namespace std;
 
+/* 
+* struct default access specifier is public and class private
+* nullptr is better than NULL as NULL causes error in func overloading
+*/
+
 // struct Node{
 //     int data;
 //     Node* left, * right;
