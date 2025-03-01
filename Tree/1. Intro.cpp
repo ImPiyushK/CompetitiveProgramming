@@ -12,12 +12,19 @@ using namespace std;
 // struct Node{
 //     int data;
 //     Node* left, * right;
-
-//     Node(int key){
-//         data = key;
-//         left = nullptr;
-//         right = nullptr;
-//     }
+// Node(){
+//     data = 0;
+//     left = right = nullptr;
+// }
+// Node(int key){
+//     data = key;
+//     left = right = nullptr;
+// }
+// Node(int key, Node* l, Node* r){
+//     data = key;
+//     left = l;
+//     right = r;
+// }
 // };
 
 class Node{
