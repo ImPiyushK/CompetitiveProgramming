@@ -2,6 +2,9 @@
 using namespace std;
 
 /* 
+* Trees can be represented in two ways:
+    - Dynamic Node Representation (Linked Representation)
+    - Array Representation (Sequential Representation)
 * struct default access specifier is public and class private
 * nullptr is better than NULL as NULL causes error in func overloading
 */
