@@ -10,15 +10,12 @@ struct Node{
     }
 };
 
-// Function to search for a value in the binary tree using DFS
 bool searchDFS(Node *root, int value){
-    // Base case: If the tree is empty or we've reached a leaf node
-    if (root == nullptr) return false;
+    if (root == nullptr) 
+        return false;
+    if (root->data == value) 
+        return true;
 
-    // If the node's data is equal to the value we are searching for
-    if (root->data == value) return true;
-
-    // Recursively search in the left and right subtrees
     bool left_res = searchDFS(root->left, value);
     bool right_res = searchDFS(root->right, value);
 
