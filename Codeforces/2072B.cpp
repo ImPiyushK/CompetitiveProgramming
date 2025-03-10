@@ -44,7 +44,6 @@ int main() {
     freopen("E:/Workspaces/CompetitiveProgramming/input.in", "r", stdin);
     freopen("E:/Workspaces/CompetitiveProgramming/output.in", "w", stdout);
     #endif
-
     fastio
 
     int tc = 1;
