@@ -22,10 +22,8 @@ void solve() {
         cout << -1 << "\n";
         return;
     }
-
     int min_ops = (abs(k) + p - 1) / p;
     min_ops = min(min_ops, n);
-
     cout << min_ops << "\n";
 }
 
@@ -40,7 +38,6 @@ int main() {
     int tc = 1;
     cin >> tc;
     for (int t = 1; t <= tc; t++) {
-        // cout << "Case #" << t << ": ";
         solve();
     }
     return 0;
