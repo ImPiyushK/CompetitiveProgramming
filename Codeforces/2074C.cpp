@@ -4,8 +4,6 @@ using namespace std;
 #define fastio ios_base::sync_with_stdio(false);cin.tie(NULL);
 #define ll long long
 #define line cout << '\n'
-#define YES cout<<"YES\n"
-#define NO cout<<"NO\n"
 #define p(ans) cout<<(ans)<<'\n'
 #define f first
 #define s second
@@ -42,7 +40,6 @@ int main() {
     int tc = 1;
     cin >> tc;
     for (int t = 1; t <= tc; t++) {
-        // cout << "Case #" << t << ": ";
         solve();
     }
     return 0;
