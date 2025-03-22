@@ -28,11 +28,11 @@ int main() {
 	freopen("input.txt", "r", stdin);
 	freopen("output.txt", "w", stdout);
 	#endif
-
+	
 	sync
 
 	int tc = 1;
-	// cin >> tc;
+	//cin >> tc;
 	for (int t = 1; t <= tc; t++) {
         // cout << "Case #" << t << ": ";
         solve();
