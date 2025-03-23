@@ -32,7 +32,7 @@ int main() {
 	sync
 
 	int tc = 1;
-	//cin >> tc;
+	// cin >> tc;
 	for (int t = 1; t <= tc; t++) {
         // cout << "Case #" << t << ": ";
         solve();
