@@ -3,7 +3,7 @@ using namespace std;
 
 #define FOR(i,a,b) for(int i = a; i <= b; ++i)
 #define ROF(i,a,b) for(int i = a; i >= b; i--)
-#define foreach(v, c) for( typeof( (c).begin() ) v = (c).begin(); v != (c).end(); ++v)
+#define foreach(v, c) for(typeof( (c).begin()) v = (c).begin(); v != (c).end(); ++v)
 
 
 #define sync ios_base::sync_with_stdio(false);cin.tie(NULL);
