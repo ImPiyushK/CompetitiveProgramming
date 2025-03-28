@@ -10,7 +10,7 @@ int main() {
 	    vector<int> h(n);
 	    for(auto& it : h)
 	        cin >> it;
-	        
+	
 	   int c = 0;
 	   for(int i = 0 ; i < n - 1 ; ++i){
 	       if(h[n-1] > h[i])
