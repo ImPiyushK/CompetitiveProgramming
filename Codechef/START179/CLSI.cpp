@@ -6,9 +6,8 @@ int main() {
 	cin >> n >> b;
 	
 	if( n >= 10*b)
-	  cout << "YES";
+	  cout << "YES\n";
 	else
-	  cout << "NO";
-  
+	  cout << "NO\n";
   return 0;
 }
