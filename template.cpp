@@ -5,7 +5,6 @@ using namespace std;
 #define ROF(i,a,b) for(int i = a; i >= b; i--)
 #define foreach(v, c) for(typeof( (c).begin()) v = (c).begin(); v != (c).end(); ++v)
 
-
 #define sync ios_base::sync_with_stdio(false);cin.tie(NULL);
 #define ull unsigned long long
 #define ll long long
@@ -35,7 +34,7 @@ int main() {
 	int tc = 1;
 	// cin >> tc;
 	for (int t = 1; t <= tc; t++) {
-        // cout << "Case #" << t << " : ";
+        // cout << "Case " << t << " : ";
         solve();
     }
     return 0;
