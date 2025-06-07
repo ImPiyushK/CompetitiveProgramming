@@ -21,7 +21,7 @@ void solve() {
     cin >> t >> a;
 
     for(int i = 0 ; i < n ; ++i){
-        if(t[i] == 'o' && t[i] == 'o'){
+        if(t[i] == 'o' && a[i] == 'o'){
             cout << "Yes\n";
             return;
         }
