@@ -6,6 +6,10 @@ class Node{
     Node *next;
 
     public:
+    Node(){
+        data = 0;
+        next = nullptr;
+    }
     Node(int data1){
         data = data1;
         next = nullptr;
@@ -25,5 +29,5 @@ int main(){
     cout << head->data << ' ';
     cout << head->next << '\n';
 
-    cout << head->next << ' ' << head->next->data << ' ' << head->next->next;
+    cout << head->next << ' ' << head->next->data << ' ' << head->next->next;    
 }
