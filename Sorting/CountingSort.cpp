@@ -6,8 +6,6 @@ vector<int> countingSort(vector<int> arr, int n){
     //if array empty
     if (n == 0)     
         return {};
-    
-    int n = arr.size();
 
     // find the maximum element
     int maxval = arr[0];
