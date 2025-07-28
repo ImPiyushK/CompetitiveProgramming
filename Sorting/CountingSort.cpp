@@ -19,15 +19,15 @@ vector<int> countingSort(vector<int> arr, int n){
     for (int i = 0; i < n; i++)
         count[arr[i]]++;
 
-    // compute prefix sum
+    // compute prefix sum for Stable Sort
     for (int i = 1; i <= maxval; i++)
         count[i] += count[i - 1];
 
-    // build output array
+    // build output array Stable
     vector<int> ans(n);
     for (int i = n - 1; i >= 0; i--) {
-        ans[count[arr[i]] - 1] = arr[i];
         count[arr[i]]--;
+        ans[count[arr[i]]] = arr[i];
     }
 
     return ans;
