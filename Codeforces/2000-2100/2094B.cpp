@@ -15,9 +15,9 @@ const ll MOD = 1e9 + 7;
 const ll INF = 1e9;
 
 void solve() {
-    int l, m, n, r;
-    cin >> l >> m >> n >> r;
-
+    int n, m, l, r; 
+    cin >> n >> m >> l >> r;
+    
     int diff = n - m;
     l = abs(l);
     if (l >= diff) {
