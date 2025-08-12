@@ -26,6 +26,7 @@ Node* insertionBeginning(Node* head, int n){
 }
 
 // Delete Particular Node at position x
+// Use this method of 2 pointers to delete last node as well
 Node* deleteParticular(Node *head, int x){
     
     if(x == 1){
