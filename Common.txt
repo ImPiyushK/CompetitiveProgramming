@@ -1,2 +1,11 @@
 # If we have to delete a node from LL but only pointer to the node to be deleted is given but no head pointer, how to proceed?
 simply copy data from next node to the current node and delete the last node.
+
+void deleteNode(Node *del){
+    
+    Node *temp = del->next;
+    del->data = temp->data;
+    del->next = temp->next;
+
+    delete temp;
+}
