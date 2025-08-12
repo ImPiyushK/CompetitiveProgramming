@@ -27,6 +27,15 @@ Node* insertionBeginning(Node* head, int n){
 
 // Delete Particular Node at position x
 Node* deleteParticular(Node *head, int x){
+    
+    if(x == 1){
+        Node *t = head;
+        head = head->next;
+        delete t;
+
+        return head;
+    }
+
     Node *cur = head, *prev = nullptr;
     x--;
     while (x--) {
