@@ -49,6 +49,18 @@ Node* deleteParticular(Node *head, int x){
     return head;
 }
 
+// Recursion
+Node* deleteParticularRecursion(Node *cur, int x){
+    if(x == 1){
+        Node *t = cur->next;
+        delete cur;
+        return t;
+    }
+    cur->next = deleteParticularRecursion(cur->next, x-1);
+    
+    return cur;
+}
+
 void traverse(Node *head){
     Node* t = head;
     cout << "Linked List: ";
@@ -70,5 +82,9 @@ int main(){
     int x = 3;
     head = deleteParticular(head, x);
     cout << "\nLinked List after Deletion:\n";
+    traverse(head);
+
+    head = deleteParticularRecursion(head, x);
+    cout << "\nLinked List after Deletion using Recursion:\n";
     traverse(head);
 }
