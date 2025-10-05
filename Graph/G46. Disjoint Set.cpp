@@ -13,15 +13,15 @@ public:
         }
     }
 
-    int findUPar(int node) {
+    int find(int node) {
         if (node == parent[node])
             return node;
-        return parent[node] = findUPar(parent[node]);
+        return parent[node] = find(parent[node]);
     }
 
     void unionByRank(int u, int v) {
-        int ulp_u = findUPar(u);
-        int ulp_v = findUPar(v);
+        int ulp_u = find(u);
+        int ulp_v = find(v);
         if (ulp_u == ulp_v) return;
         if (rank[ulp_u] < rank[ulp_v]) {
             parent[ulp_u] = ulp_v;
@@ -36,8 +36,8 @@ public:
     }
 
     void unionBySize(int u, int v) {
-        int ulp_u = findUPar(u);
-        int ulp_v = findUPar(v);
+        int ulp_u = find(u);
+        int ulp_v = find(v);
         if (ulp_u == ulp_v) return;
         if (size[ulp_u] < size[ulp_v]) {
             parent[ulp_u] = ulp_v;
@@ -58,14 +58,14 @@ int main() {
     ds.unionBySize(6, 7);
     ds.unionBySize(5, 6);
     // if 3 and 7 same or not
-    if (ds.findUPar(3) == ds.findUPar(7)) {
+    if (ds.find(3) == ds.find(7)) {
         cout << "Same\n";
     }
     else cout << "Not same\n";
 
     ds.unionBySize(3, 7);
 
-    if (ds.findUPar(3) == ds.findUPar(7)) {
+    if (ds.find(3) == ds.find(7)) {
         cout << "Same\n";
     }
     else cout << "Not same\n";
