@@ -24,3 +24,35 @@ public:
         return helperCanPartition(nums, sum/2, n-1);
     }
 };  
+
+// Memoization
+class Solution {
+public:
+    bool helperCanPartition(vector<int> &nums, int t, int i, vector<vector<int>> &dp) {
+
+        if(t == 0)
+            return true;
+        if(i == 0)
+            return nums[i] == t;
+        
+        if(dp[i][t] != -1)
+            return dp[i][t];
+        bool take = false;
+        if(t >= nums[i])
+            take = helperCanPartition(nums, t-nums[i], i - 1, dp);
+
+        bool notTake = helperCanPartition(nums, t, i - 1, dp);
+
+        return dp[i][t] = (take || notTake);
+        
+    }    
+    bool canPartition(vector<int>& nums) {
+        int sum = 0, n = nums.size();
+        for(int i = 0 ; i < n; ++i)
+            sum += nums[i];
+        if (sum % 2 != 0)
+            return false;
+        vector<vector<int>> dp(n, vector<int>(sum/2 + 1, -1));
+        return helperCanPartition(nums, sum/2, n-1, dp);
+    }
+};  
